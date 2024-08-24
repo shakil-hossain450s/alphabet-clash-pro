@@ -13,16 +13,98 @@
 </head>
 
 <body class="font-poppins">
-    <main class="bg-[#010313] min-h-screen bg-[url(./images/background.png)] bg-no-repeat bg-center">
-        <section class="home text-white flex justify-center items-center min-h-screen">
-            <div class="flex flex-col items-center">
-                <h1 class="text-8xl font-anton scale-150 mb-12">Alphabet Clash</h1>
-                <p class="text-xl mb-5">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+    <main class="bg-[#010313] min-h-screen bg-[url(./images/background.png)] bg-no-repeat bg-center bg-contain">
+        <!-- home screen start -->
+        <section class="container mx-auto hidden home text-white flex justify-center items-center min-h-screen">
+            <div class="flex flex-col items-center text-center">
+                <h1 class="text-7xl font-anton mb-12">Alphabet Clash</h1>
+                <p class="text-lg mb-5">Unleash Your Keyboard <br> Kung Fu : Press “Enter” to Play</p>
                 <button class="btn bg-white text-gray-950 px-8 text-xl">Play</button>
             </div>
         </section>
-        <section class="play-ground"></section>
-        <section class="score"></section>
+        <!-- home screen end -->
+        <!-- play ground start -->
+        <section class="container mx-auto play-ground hidden">
+            <div class="flex flex-col items-center pt-5">
+                <!-- screen -->
+                <div
+                    class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl mb-8 border-[#010313CC] bg-[#FFFFFFB3] mx-auto">
+                    <div class="flex justify-center text-white">
+                        <p class="bg-[#2F2941] px-7 py-4 rounded-b-lg -translate-y-5">Don't watch keyboard while
+                            playing...</p>
+                    </div>
+                    <div class="flex justify-center items-center mt-10">
+                        <p class="text-9xl text-[#010313] font-semibold">Y</p>
+                    </div>
+                </div>
+                <!-- keyboard start -->
+                <div class="mb-8">
+                    <div class="my-1 flex w-full justify-center gap-1">
+                        <kbd class="kbd">q</kbd>
+                        <kbd class="kbd">w</kbd>
+                        <kbd class="kbd">e</kbd>
+                        <kbd class="kbd">r</kbd>
+                        <kbd class="kbd">t</kbd>
+                        <kbd class="kbd">y</kbd>
+                        <kbd class="kbd">u</kbd>
+                        <kbd class="kbd">i</kbd>
+                        <kbd class="kbd">o</kbd>
+                        <kbd class="kbd">p</kbd>
+                    </div>
+                    <div class="my-1 flex w-full justify-center gap-1">
+                        <kbd class="kbd">a</kbd>
+                        <kbd class="kbd">s</kbd>
+                        <kbd class="kbd">d</kbd>
+                        <kbd class="kbd">f</kbd>
+                        <kbd class="kbd">g</kbd>
+                        <kbd class="kbd">h</kbd>
+                        <kbd class="kbd">j</kbd>
+                        <kbd class="kbd">k</kbd>
+                        <kbd class="kbd">l</kbd>
+                    </div>
+                    <div class="my-1 flex w-full justify-center gap-1">
+                        <kbd class="kbd">z</kbd>
+                        <kbd class="kbd">x</kbd>
+                        <kbd class="kbd">c</kbd>
+                        <kbd class="kbd">v</kbd>
+                        <kbd class="kbd">b</kbd>
+                        <kbd class="kbd">n</kbd>
+                        <kbd class="kbd">m</kbd>
+                        <kbd class="kbd">/</kbd>
+                    </div>
+                </div>
+                <!-- keyboard end -->
+                <!-- life score -->
+                <div class="w-full flex justify-between">
+                    <button class="btn bg-[#894189] px-8 hover:bg-[#894189] rounded-full border-0 text-white">
+                        Life
+                        <img src="./images/heart.svg" alt="">
+                        <span>1</span>
+                    </button>
+                    <button class="btn bg-[#360490] hover:bg-[#360490] px-8 rounded-full border-0 text-white">
+                        Score
+                        <img src="./images/doller.svg" alt="">
+                        <span>1</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- play ground end -->
+        <!-- final score start --> 
+        <section class="container mx-auto score hidden">
+            <div class="text-white flex justify-center items-center min-h-screen">
+                <div style="background: linear-gradient(121deg, rgba(255, 255, 255, 0.56) 0%, rgba(152, 151, 151, 0.00) 102.2%);"
+                    class="p-5 rounded-2xl border border-[#FFFFFF33] space-y-2 flex flex-col justify-center items-center">
+                    <h1 class="text-4xl">
+                        <span class="font-extrabold">Score: </span>
+                        <span>14</span>
+                    </h1>
+                    <button class="btn bg-white text-gray-950 px-8 text-lg">Play</button>
+                    <p class="text-lg">Practice will make you Pro</p>
+                </div>
+            </div>
+        </section>
+        <!-- final score end -->
     </main>
 </body>
 
