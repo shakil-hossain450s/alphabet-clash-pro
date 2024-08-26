@@ -1,6 +1,10 @@
 function handleKeyboardButtonPress(event) {
     const keyPressed = event.key;
 
+    if(event.key === "Escape"){
+        gameOver();
+    }
+
     // key player is expected to press 
     const currentAlphabetElement = document.getElementById('current-alphabet');
     const currentAlphabet = currentAlphabetElement.innerText;
@@ -13,17 +17,6 @@ function handleKeyboardButtonPress(event) {
         const newScore = currentScore + 1;
         setElementTextValueById('current-score', newScore);
 
-        // ----------------------------------------------------------
-        // // 1. get the current score
-        // const currentScoreElement = document.getElementById('current-score');
-        // const currentScoreText = currentScoreElement.innerText;
-        // const currentScore = parseFloat(currentScoreText);
-        // // 2. increase the score by 1
-        // const newScore = currentScore + 1;
-        // // 3. show the updated score
-        // currentScoreElement.innerText = newScore;
-        // ----------------------------------------------------------
-
         // start a new round
         removeBackgroundColorById(expectedAlphabet);
         continueGame();
@@ -35,19 +28,6 @@ function handleKeyboardButtonPress(event) {
         if(newLife === 0){
             gameOver();
         }
-
-        // ----------------------------------------------------------
-        // // step-1: get the current life number
-        // const currentLifeElement = document.getElementById('current-life');
-        // const currentLifeText = currentLifeElement.innerText;
-        // const currentLife = parseFloat(currentLifeText);
-
-        // // step-2: reduce the life number
-        // const newLife = currentLife - 1;
-
-        // // step-3: display the remaining life
-        // currentLifeElement.innerText = newLife;
-        // ----------------------------------------------------------
     }
 }
 // capture keyboard key press
@@ -80,4 +60,12 @@ function play() {
 function gameOver(){
     hideElementById('play-ground');
     showElementById('final-score');
+
+    // set the last score
+    const lastScore = getElementTextValueById('current-score');
+    setElementTextValueById('last-score', lastScore);
+
+    // clear the highlighted alphabet
+    const currentAlphabet = getElementTextById('current-alphabet');
+    removeBackgroundColorById(currentAlphabet);
 }

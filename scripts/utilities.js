@@ -30,6 +30,12 @@ function setElementTextValueById(elementId, value){
     element.innerText = value;
 }
 
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId);
+    const text = element.innerText;
+    return text;
+}
+
 function getARandomAlphabet(){
     const alphabetsString = 'abcdefghijklmnopqrstuvwxyz';
     const alphabets = alphabetsString.split('');
