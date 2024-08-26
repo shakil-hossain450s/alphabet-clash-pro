@@ -80,7 +80,7 @@
                     <button class="btn text-lg bg-[#894189] px-8 hover:bg-[#894189] rounded-full border-0 text-white">
                         Life
                         <img src="./images/heart.svg" alt="">
-                        <span>5</span>
+                        <span id="current-life">5</span>
                     </button>
                     <!-- display score -->
                     <button class="btn text-lg bg-[#360490] hover:bg-[#360490] px-8 rounded-full border-0 text-white">
@@ -93,15 +93,16 @@
         </section>
         <!-- play ground end -->
         <!-- final score start --> 
-        <section class="container mx-auto score hidden">
+        <section id="final-score" class="container mx-auto hidden">
             <div class="text-white flex justify-center items-center min-h-screen">
                 <div style="background: linear-gradient(121deg, rgba(255, 255, 255, 0.56) 0%, rgba(152, 151, 151, 0.00) 102.2%);"
-                    class="p-5 rounded-2xl border border-[#FFFFFF33] space-y-2 flex flex-col justify-center items-center">
-                    <h1 class="text-4xl">
+                    class="p-6 rounded-2xl border border-[#FFFFFF33] space-y-2 flex flex-col justify-center items-center">
+                    <h1 class="text-2xl font-semibold uppercase">Game Over</h1>
+                    <h1 class="text-5xl">
                         <span class="font-extrabold">Score: </span>
                         <span>14</span>
                     </h1>
-                    <button class="btn bg-white text-gray-950 px-8 text-lg">Play</button>
+                    <button onclick="play()" class="btn bg-white text-gray-950 px-8 text-lg">Play Again</button>
                     <p class="text-lg">Practice will make you Pro</p>
                 </div>
             </div>
