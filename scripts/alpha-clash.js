@@ -6,8 +6,7 @@ function handleKeyboardButtonPress(event) {
     }
 
     // key player is expected to press 
-    const currentAlphabetElement = document.getElementById('current-alphabet');
-    const currentAlphabet = currentAlphabetElement.innerText;
+    const currentAlphabet = getElementTextById('current-alphabet');
     const expectedAlphabet = currentAlphabet.toLowerCase();
 
     // check right or wrong key pressed
