@@ -1,20 +1,23 @@
-function hideElementById(elementId) {
+function hideElementById(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('hidden');
 }
 
-function showElementById(elementId) {
+function showElementById(elementId){
     const element = document.getElementById(elementId);
     element.classList.remove('hidden');
 }
 
-function getARandomAlphabet() {
-    // get or create an alphabet array
-    const alphabetsString = 'abcdefghijklmnopqrstuvwxyz';
-    const alphabets = alphabetsString.split("");
+function changeBackgroundColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('bg-orange-400');
+}
 
-    // get a random index between 0-25
-    const randomNumber = Math.random() * 25;
+function getARandomAlphabet(){
+    const alphabetsString = 'abcdefghijklmnopqrstuvwxyz';
+    const alphabets = alphabetsString.split('');
+    
+    const randomNumber = Math.random()*25;
     const index = Math.round(randomNumber);
     const alphabet = alphabets[index];
     return alphabet;
